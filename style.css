@@ -106,12 +106,12 @@ li button {
 
     li {
         font-size: 0.9rem;
-        flex-wrap: wrap; /* Ensures items don’t overflow */
+        flex-wrap: wrap; 
     }
 
     .buttons {
         gap: 3px;
-        flex-wrap: wrap; /* Allows buttons to wrap if needed */
+        flex-wrap: wrap;
     }
 
     li button {
