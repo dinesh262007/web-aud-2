@@ -93,7 +93,7 @@ li button {
     color: white;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 500px) {
     .container {
         width: 95%;
         padding: 15px;
@@ -106,14 +106,19 @@ li button {
 
     li {
         font-size: 0.9rem;
+        flex-wrap: nowrap; 
     }
 
     .buttons {
+        display: flex;
+        flex-wrap: nowrap; 
         gap: 3px;
     }
 
     li button {
-        padding: 6px;
+        padding: 5px;
         font-size: 0.8rem;
+        flex: 1; 
+        min-width: 60px; 
     }
 }
