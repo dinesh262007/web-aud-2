@@ -95,21 +95,27 @@ li button {
 
 @media (max-width: 600px) {
     .container {
-        width: 90%;
+        width: 95%;
         padding: 15px;
     }
 
     input, button {
-        width: 100%;
+        font-size: 0.9rem;
+        padding: 8px;
     }
 
     li {
-        flex-direction: column;
-        align-items: stretch;
+        font-size: 0.9rem;
+        flex-wrap: wrap; /* Ensures items don’t overflow */
     }
 
     .buttons {
-        flex-direction: column;
-        gap: 10px;
+        gap: 3px;
+        flex-wrap: wrap; /* Allows buttons to wrap if needed */
+    }
+
+    li button {
+        padding: 6px;
+        font-size: 0.8rem;
     }
 }
