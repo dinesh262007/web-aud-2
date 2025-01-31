@@ -106,12 +106,10 @@ li button {
 
     li {
         font-size: 0.9rem;
-        flex-wrap: wrap; 
     }
 
     .buttons {
         gap: 3px;
-        flex-wrap: wrap;
     }
 
     li button {
