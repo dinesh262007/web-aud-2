@@ -22,7 +22,12 @@ function showTasks() {
 
     for (let i = 0; i < tasks.length; i++) {
         let listItem = document.createElement('li');
-        listItem.className = completedFlags[i] ? 'completed' : '';
+       if (completedFlags[i]) {
+         listItem.className = 'completed';
+      } else {
+      listItem.className = '';
+       }
+
 
         listItem.innerHTML = `
             <span>${tasks[i]}</span>
