@@ -1,3 +1,5 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css');
+
 body {
     min-height: 100vh;
     display: flex;
@@ -12,31 +14,41 @@ body {
     border-radius: 5px;
     width: 70vh;
     margin: 10vh 0;
-    box-sizing: border-box;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .container h2 {
     text-align: center;
+    font-family: Arial, sans-serif;
+    color: #333;
 }
 
 input {
-    width: calc(100% - 16px);
-    padding: 8px;
+    width: calc(100% - 22px);
+    padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    font-size: 1rem;
 }
 
 button {
     width: 100%;
-    padding: 8px;
-    background-color: blueviolet;
+    padding: 10px;
     color: white;
     border: none;
     cursor: pointer;
+    border-radius: 4px;
+    transition: 0.3s ease;
+    font-size: 1rem;
+    font-weight: bold;
 }
 
-button:hover {
+#b1 {
+    background-color: blueviolet;
+}
+
+#b1:hover {
     background-color: purple;
 }
 
@@ -46,11 +58,19 @@ ul {
 }
 
 li {
-    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
     background: #f9f9f9;
     margin: 5px 0;
     border: 1px solid #ccc;
     border-radius: 4px;
+    transition: 0.3s ease-in-out;
+}
+
+li:hover {
+    background: #e6e6e6;
 }
 
 .completed {
@@ -60,20 +80,43 @@ li {
 
 .buttons {
     display: flex;
-    justify-content: space-between;
-    gap: 5px;
+    gap: 8px;
 }
 
-button.delete-btn {
-    background-color: red;
+.buttons button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    font-size: 1.2rem;
+    transition: 0.3s ease-in-out;
 }
 
-button.edit-btn {
-    background-color: orange;
+.buttons .complete-btn {
+    color: green;
 }
 
-button.complete-btn {
-    background-color: green;
+.buttons .complete-btn:hover {
+    color: darkgreen;
+    transform: scale(1.2);
+}
+
+.buttons .edit-btn {
+    color: orange;
+}
+
+.buttons .edit-btn:hover {
+    color: darkorange;
+    transform: scale(1.2);
+}
+
+.buttons .delete-btn {
+    color: red;
+}
+
+.buttons .delete-btn:hover {
+    color: darkred;
+    transform: scale(1.2);
 }
 
 @media (max-width: 500px) {
@@ -82,7 +125,8 @@ button.complete-btn {
         padding: 15px;
     }
 
-    input, button {
+    input,
+    button {
         font-size: 0.9rem;
     }
 
@@ -91,16 +135,12 @@ button.complete-btn {
     }
 
     .buttons {
-        gap: 3px;
+        gap: 5px;
     }
 
     button {
         font-size: 0.8rem;
-        min-width: 60px;
+        min-width: 50px;
     }
 }
 
-
-
-
-   
