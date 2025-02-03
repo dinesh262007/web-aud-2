@@ -1,5 +1,5 @@
-let tasks = []; 
-let completedFlags = []; 
+let tasks = [];
+let completedTasks = [];
 
 function addTask() {
     let taskInput = document.getElementById('taskinput');
@@ -10,9 +10,10 @@ function addTask() {
         return;
     }
 
-    tasks.push(taskText);        
-    completedFlags.push(false);
+    tasks.push(taskText);
+    completedTasks.push(false);
     taskInput.value = '';
+
     showTasks();
 }
 
@@ -21,43 +22,44 @@ function showTasks() {
     taskList.innerHTML = '';
 
     for (let i = 0; i < tasks.length; i++) {
-        let listItem = document.createElement('li');
-       if (completedFlags[i]) {
-         listItem.className = 'completed';
-      } else {
-      listItem.className = '';
-       }
+        let li = document.createElement('li');
+        li.className = completedTasks[i] ? 'completed' : '';
 
+        li.innerHTML = `
+        <span>${tasks[i]}</span>
+        <div class="buttons">
+            <button class="complete-btn" onclick="completeTask(${i})">
+                <i class="fa-solid fa-check"></i>
+            </button>
+            <button class="edit-btn" onclick="editTask(${i})">
+                <i class="fa-solid fa-pen"></i>
+            </button>
+            <button class="delete-btn" onclick="deleteTask(${i})">
+                <i class="fa-solid fa-trash"></i>
+            </button>
+        </div>`;
 
-        listItem.innerHTML = `
-            <span>${tasks[i]}</span>
-            <div class="buttons">
-                <button class="complete-btn" onclick="completeTask(${i})">Completed</button>
-                <button class="edit-btn" onclick="editTask(${i})">Edit</button>
-                <button class="delete-btn" onclick="deleteTask(${i})">Delete</button>
-            </div>
-        `;
-        taskList.appendChild(listItem);
+        taskList.appendChild(li);
     }
 }
 
 function completeTask(index) {
-    completedFlags[index] = !completedFlags[index]; 
+    completedTasks[index] = !completedTasks[index];
     showTasks();
 }
 
 function editTask(index) {
-    let newTask = prompt('Enter new task:', tasks[index]);
-    if (newTask !== null && newTask.trim() !== '') {
-        tasks[index] = newTask.trim(); 
-        showTasks();
+    let newTask = prompt('Enter new task');
+    if (newTask === null || newTask.trim() === '') {
+        return;
     }
-}
-
-function deleteTask(index) {
-    tasks.splice(index, 1);         
-    completedFlags.splice(index, 1); 
+    tasks[index] = newTask;
     showTasks();
 }
 
-            
+function deleteTask(index) {
+    tasks.splice(index, 1);
+    completedTasks.splice(index, 1);
+    showTasks();
+}
+
