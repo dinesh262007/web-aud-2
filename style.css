@@ -10,10 +10,8 @@ body {
     background-color: white;
     padding: 20px;
     border-radius: 5px;
-    width: 40vw;
-    min-height: 200px;
-    margin-top: 10vh;
-    margin-bottom: 10vh;
+    width: 70vh;
+    margin: 10vh 0;
     box-sizing: border-box;
 }
 
@@ -22,12 +20,11 @@ body {
 }
 
 input {
-    width: calc(100% - 22px);
+    width: calc(100% - 16px);
     padding: 8px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    box-sizing: border-box;
 }
 
 button {
@@ -37,7 +34,6 @@ button {
     color: white;
     border: none;
     cursor: pointer;
-    margin-bottom: 10px;
 }
 
 button:hover {
@@ -45,6 +41,7 @@ button:hover {
 }
 
 ul {
+    list-style-type: none;
     padding: 0;
 }
 
@@ -52,9 +49,6 @@ li {
     padding: 8px;
     background: #f9f9f9;
     margin: 5px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
@@ -64,33 +58,22 @@ li {
     color: gray;
 }
 
-li button {
-    margin-top: 5px;
-    padding: 5px;
-    border: none;
-    cursor: pointer;
-}
-
-.buttons{
+.buttons {
     display: flex;
     justify-content: space-between;
-    width: 100%;
-    gap:5px;
+    gap: 5px;
 }
 
-.delete-btn {
+button.delete-btn {
     background-color: red;
-    color: white;
 }
 
-.edit-btn {
-    background-color:orange;
-    color: white;
+button.edit-btn {
+    background-color: orange;
 }
 
-.complete-btn {
+button.complete-btn {
     background-color: green;
-    color: white;
 }
 
 @media (max-width: 500px) {
@@ -101,24 +84,26 @@ li button {
 
     input, button {
         font-size: 0.9rem;
-        padding: 8px;
     }
 
     li {
         font-size: 0.9rem;
-        flex-wrap: nowrap; 
     }
 
     .buttons {
-        display: flex;
-        flex-wrap: nowrap; 
         gap: 3px;
     }
 
-    li button {
-        padding: 5px;
+    button {
         font-size: 0.8rem;
-        flex: 1; 
-        min-width: 60px; 
+        min-width: 60px;
     }
 }
+
+
+
+   
+
+
+
+   
