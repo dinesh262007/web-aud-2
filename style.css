@@ -10,7 +10,7 @@ body {
     background-color: white;
     padding: 20px;
     border-radius: 5px;
-    width: 50vw;
+    width: 70vh;
     margin: 10vh 0;
     box-sizing: border-box;
 }
@@ -20,7 +20,7 @@ body {
 }
 
 input {
-    width: calc(100% - 22px);
+    width: calc(100% - 16px);
     padding: 8px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
@@ -64,15 +64,15 @@ li {
     gap: 5px;
 }
 
-.delete-btn {
+button.delete-btn {
     background-color: red;
 }
 
-.edit-btn {
+button.edit-btn {
     background-color: orange;
 }
 
-.complete-btn {
+button.complete-btn {
     background-color: green;
 }
 
@@ -100,9 +100,6 @@ li {
     }
 }
 
-
-
-   
 
 
 
