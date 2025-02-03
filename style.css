@@ -64,15 +64,15 @@ li {
     gap: 5px;
 }
 
-button.delete-btn {
+.delete-btn {
     background-color: red;
 }
 
-button.edit-btn {
+.edit-btn {
     background-color: orange;
 }
 
-button.complete-btn {
+.complete-btn {
     background-color: green;
 }
 
