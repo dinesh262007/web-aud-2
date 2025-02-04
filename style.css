@@ -35,7 +35,6 @@ button {
     width: 100%;
     padding: 10px;
     color: white;
-    border: none;
     cursor: pointer;
     border-radius: 4px;
     transition: 0.3s ease;
