@@ -23,10 +23,10 @@ function showTasks() {
 
     for (let i = 0; i < tasks.length; i++) {
         let li = document.createElement('li');
-          if (completedFlags[i]) {
-             listItem.className = 'completed';
+          if (completedTasks[i]) {
+             li.className = 'completed';
                   } else {
-              listItem.className = '';
+              li.className = '';
             }
 
 
