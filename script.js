@@ -54,7 +54,7 @@ function completeTask(index) {
 }
 
 function editTask(index) {
-    let newTask = prompt('Enter new task',tasks[i]);
+    let newTask = prompt('Enter new task');
     if (newTask === null || newTask.trim() === '') {
         return;
     }
