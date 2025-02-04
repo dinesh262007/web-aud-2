@@ -35,6 +35,7 @@ button {
     width: 100%;
     padding: 10px;
     color: white;
+    border: none;
     cursor: pointer;
     border-radius: 4px;
     transition: 0.3s ease;
@@ -81,6 +82,8 @@ li:hover {
 }
 
 .buttons button {
+    background: none;
+    border: none;
     cursor: pointer;
     padding: 5px;
     font-size: 1.2rem;
@@ -134,10 +137,16 @@ li:hover {
 
     button {
         font-size: 0.8rem;
+        min-width: 50px;
     }
 }
 
 
+
+
+
+
+ 
 
 
 
