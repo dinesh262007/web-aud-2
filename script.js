@@ -23,13 +23,7 @@ function showTasks() {
 
     for (let i = 0; i < tasks.length; i++) {
         let li = document.createElement('li');
-
-        // Corrected variable name
-        if (completedTasks[i]) {
-            li.className = 'completed';  // Fixed `listItem` → `li`
-        } else {
-            li.className = '';
-        }
+        li.className = completedTasks[i] ? 'completed' : '';
 
         li.innerHTML = `
         <span>${tasks[i]}</span>
@@ -69,7 +63,8 @@ function deleteTask(index) {
     showTasks();
 }
 
-
+ 
+    
     
 
 
